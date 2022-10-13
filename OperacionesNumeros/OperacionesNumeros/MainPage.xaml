@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OperacionesNumeros.MainPage">
+
+    <StackLayout Background="#eeeeee"
+                 Padding="30" Spacing="0">
+        <Image Source="matematicas"
+               WidthRequest="65"
+               VerticalOptions="EndAndExpand"/>
+        <Frame  HasShadow="False" 
+                VerticalOptions="EndAndExpand">
+            <StackLayout Padding="10">
+                <Label Text="Operaciones matemáticas" 
+                       HorizontalTextAlignment="Center"
+                       TextColor="black"
+                       FontAttributes="Bold"
+                       FontSize="Large" />
+                <Label Text="Operaciones de dos números"
+                       HorizontalTextAlignment="Center" 
+                       FontSize="Small"/>
+                <StackLayout Spacing="15" Margin="0,10">
+                    <Entry Placeholder="Primer número"
+                           Keyboard="Numeric"
+                           FontSize="Small"
+                           x:Name="txFirstNum" />
+                    <Entry Placeholder="Segundo número"
+                           Keyboard="Numeric"
+                           FontSize="Small" 
+                           x:Name="txSecondtNum"/>
+                </StackLayout>
+                <Frame Margin="25,20" HasShadow="False" Padding="0" CornerRadius="10">
+                    <Grid RowDefinitions="*,*"
+                          ColumnDefinitions="*,*"
+                          RowSpacing="0"
+                          ColumnSpacing="0">
+                        <Button Grid.Row="0"
+                                Grid.Column="0"
+                                Text="sumar"
+                                TextColor="White"
+                                Background="#0aaf9e"
+                                Padding="0,30"
+                                CornerRadius="0" 
+                                x:Name="btnSumar"
+                                Clicked="btnSumar_Clicked"/>
+                        <Button Grid.Row="0"
+                                Grid.Column="1"
+                                Text="restar"
+                                TextColor="White"
+                                Background="#19779b"
+                                Padding="0,30"
+                                CornerRadius="0"
+                                x:Name="btnRestar"
+                                Clicked="btnRestar_Clicked"/>
+                        <Button Grid.Row="1"
+                                Grid.Column="0"
+                                Text="multiplicar"
+                                TextColor="White"
+                                Background="#8425e1"
+                                Padding="0,30"
+                                CornerRadius="0"
+                                x:Name="btnMulti"
+                                Clicked="btnMulti_Clicked"/>
+                        <Button Grid.Row="1"
+                                Grid.Column="1"
+                                Text="dividir"
+                                TextColor="White"
+                                Background="#12165c"
+                                Padding="0,30"
+                                CornerRadius="0"
+                                x:Name="btnDivi" 
+                                Clicked="btnDivi_Clicked"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+        </Frame>
+        
+        
+        
+    </StackLayout>
+
+</ContentPage>
